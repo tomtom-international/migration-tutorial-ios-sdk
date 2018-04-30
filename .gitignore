@@ -1,0 +1,67 @@
+maps-coresdk-all/
+*.[oa]
+.DS_Store
+.gradle/
+*.o
+*.so
+*.o.d
+*~
+*.bak
+*.class
+*.ear
+*.war
+*.ipa
+*.mobileprovision
+*.dSYM.zip
+*.cer
+nohup.out
+Screenshot*.png
+*.DS_Store
+*.pyc
+captures/
+################ decarta patterns
+vplog.kml
+profiler.out
+persistent.properties
+persistent-store
+################ gradle generated
+.gradle
+local.gradle
+build
+gradlebuild
+!/build/
+################ maven generated
+target
+################ android generated
+gen
+################ eclipse generated
+### currently there is no bin/ pattern, if we need to add it we need to specially
+### treat a few specially that do have source files in them
+.classpath
+.project
+.settings
+.cproject
+eclipsebin/
+################ IDEA
+*.iml
+local.properties
+.idea
+**/fastlane/report.xml
+############### Cocoapods
+Podfile.lock
+Pods/
+*.orig
+._*
+.repo
+
+**/fastlane/report.xml
+**/fastlane/README.md
+
+
+**.xcworkspace
+**.xcworkspace/**
+**/project.xcworkspace/**
+**/xcuserdata/**
+**/*.framework.zip
+**/*.podspec-e
+**xcuserdata/*
