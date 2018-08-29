@@ -29,14 +29,18 @@
     CLLocationCoordinate2D routeStart = CLLocationCoordinate2DMake(52.376368, 4.908113);
     CLLocationCoordinate2D routeStop = CLLocationCoordinate2DMake(52.372281, 4.846595);
     
-    TTRouteQuery *routeQuery = [[[TTRouteQueryBuilder alloc] initWithDest:routeStop withOrig:routeStart] build];
+    TTRouteQuery *routeQuery = [[TTRouteQueryBuilder createWithDest:routeStop andOrig:routeStart] build];
     TTRoute *route = [[TTRoute alloc] init];
-    [route planRouteWithQuery:routeQuery withAsyncDelegate:self];
+    route.delegate = self;
+    
+    [self.mapView onMapReadyCompletion:^{
+        [route planRouteWithQuery:routeQuery];
+    }];
 }
 
 - (void)route:(TTRoute *)route completedWithResult:(TTRouteResult *)result {
     for(TTFullRoute *fullRoute in result.routes) {
-        TTMapRoute *mapRoute = [TTMapRoute routeWithRouteData:fullRoute];
+        TTMapRoute *mapRoute = [TTMapRoute routeWithCoordinatesData:fullRoute];
         [self.mapView.routeManager addRoute:mapRoute];
         mapRoute.active = YES;
     }}
