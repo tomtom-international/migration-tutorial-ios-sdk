@@ -107,7 +107,6 @@
 				8BCFF7DA20973B32009FCA41 /* Frameworks */,
 				8BCFF7DB20973B32009FCA41 /* Resources */,
 				C33339199FD642BD9900B5E5 /* [CP] Embed Pods Frameworks */,
-				EE26E5390C4A4F0DD45F47CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,40 +168,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TomTomSDKSampleiOSapp/Pods-TomTomSDKSampleiOSapp-frameworks.sh",
-				"${PODS_ROOT}/TomTomOnlineSDKMaps/TomTomOnlineSDKMaps/TomTomOnlineSDKMaps.framework",
-				"${PODS_ROOT}/TomTomOnlineSDKMapsUIExtensions/TomTomOnlineSDKMapsUIExtensions/TomTomOnlineSDKMapsUIExtensions.framework",
-				"${PODS_ROOT}/TomTomOnlineSDKRouting/TomTomOnlineSDKRouting/TomTomOnlineSDKRouting.framework",
-				"${PODS_ROOT}/TomTomOnlineSDKSearch/TomTomOnlineSDKSearch/TomTomOnlineSDKSearch.framework",
-				"${PODS_ROOT}/TomTomOnlineUtils/TomTomOnlineUtils/TomTomOnlineUtils.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TomTomSDKSampleiOSapp/Pods-TomTomSDKSampleiOSapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TomTomOnlineSDKMaps.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TomTomOnlineSDKMapsUIExtensions.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TomTomOnlineSDKRouting.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TomTomOnlineSDKSearch.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TomTomOnlineUtils.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TomTomSDKSampleiOSapp/Pods-TomTomSDKSampleiOSapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TomTomSDKSampleiOSapp/Pods-TomTomSDKSampleiOSapp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE26E5390C4A4F0DD45F47CA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TomTomSDKSampleiOSapp/Pods-TomTomSDKSampleiOSapp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TomTomSDKSampleiOSapp/Pods-TomTomSDKSampleiOSapp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FE546C724C3AA9FED11A5815 /* [CP] Check Pods Manifest.lock */ = {
