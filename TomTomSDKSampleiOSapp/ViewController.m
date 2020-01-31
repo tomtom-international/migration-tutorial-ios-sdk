@@ -40,9 +40,8 @@
 
 - (void)route:(TTRoute *)route completedWithResult:(TTRouteResult *)result {
     for(TTFullRoute *fullRoute in result.routes) {
-        TTMapRoute *mapRoute = [TTMapRoute routeWithCoordinatesData:fullRoute];
+        TTMapRoute *mapRoute = [TTMapRoute routeWithCoordinatesData:fullRoute withRouteStyle:TTMapRouteStyle.defaultActiveStyle imageStart:TTMapRoute.defaultImageDeparture imageEnd:TTMapRoute.defaultImageDestination];
         [self.mapView.routeManager addRoute:mapRoute];
-        mapRoute.active = YES;
     }}
 
 - (void)route:(TTRoute *)route completedWithResponseError:(TTResponseError *)responseError {
